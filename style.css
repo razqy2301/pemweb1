@@ -73,7 +73,7 @@ body {
 }
 
 .profile-pic {
-  border-radius: 0%;
+  border-radius: 15%;
   border: 3px solid var(--accent);
 }
 
