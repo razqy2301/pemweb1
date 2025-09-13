@@ -73,10 +73,11 @@ body {
 }
 
 .profile-pic {
-  border-radius: 15%;
+  border-radius: 45%;
   border: 3px solid var(--accent);
-  widht: 125px;
+  width: 125px;
   height: 125px;
+  object-fit: cover;
 }
 
 .accent {
