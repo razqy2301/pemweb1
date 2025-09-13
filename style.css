@@ -115,6 +115,11 @@ body {
   margin-top: 20px;
 }
 
+.profile-pic {
+  border-radius: 15%;
+  border: 3px solid var(--accent);
+}
+
 .exp-card {
   background: var(--card-bg);
   padding: 18px;
