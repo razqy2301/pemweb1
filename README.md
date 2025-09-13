@@ -21,7 +21,7 @@
 
   <!-- Hero -->
   <section class="hero">
-    <img src="https://via.placeholder.com/120" alt="Foto Profil" class="profile-pic">
+    <img src="[https://via.placeholder.com/120](https://uploads.onecompiler.io/43wgyw8sv/43wgztxys/apN4ww8_700b%20(1).jpg)" alt="Foto Profil" class="profile-pic">
     <h1>Halo, saya <span class="accent">Muhammad Razqy</span></h1>
     <p class="tag">Web Developer | Belajar HTML, CSS & JS</p>
     <a href="#contact" class="btn">Hire Me</a>
