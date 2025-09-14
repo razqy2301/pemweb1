@@ -99,8 +99,8 @@ body {
 }
 
 .btn:hover {
-  background: #ff9800;
-  box-shadow: 0 0 12px rgba(255, 152, 0, 0.6);
+  background: #1e1e1e;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.6);
 }
 
 /* Container */
@@ -188,8 +188,8 @@ body {
 }
 
 .contact-form button:hover {
-  background: #ff9800;
-  box-shadow: 0 0 12px rgba(255, 152, 0, 0.6);
+  background: #1e1e1e;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.6);
 }
 
 /* Footer */
@@ -246,7 +246,7 @@ body.dark-mode .contact-form button {
 }
 
 .dark-toggle:hover {
-  background: #ff9800;
+  background: #1e1e1e;
 }
 
 /* Responsif */
