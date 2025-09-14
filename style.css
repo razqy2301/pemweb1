@@ -1,4 +1,4 @@
-/* === Variabel Warna (Dark Theme) === */
+/* === Variabel Warna === */
 :root {
   --bg: #121212;
   --text: #f5f5f5;
@@ -6,6 +6,7 @@
   --muted: #b0b0b0;
   --card-bg: #1e1e1e;
   --radius: 12px;
+  --white: #ffffff;
 }
 
 /* Reset */
@@ -20,6 +21,7 @@ body {
   background: var(--bg);
   color: var(--text);
   line-height: 1.6;
+  transition: background 0.3s, color 0.3s;
 }
 
 /* Header */
@@ -35,10 +37,6 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-
-.brand {
-  color: var(--accent);
 }
 
 .nav-links {
@@ -61,7 +59,7 @@ body {
   display: none;
   background: none;
   border: none;
-  font-size: 22px;
+  font-size: 24px;
   color: var(--text);
   cursor: pointer;
 }
@@ -74,9 +72,9 @@ body {
 
 .profile-pic {
   border-radius: 50%;
-  border: 10px solid var(--accent);
-  width: 300px;
-  height: 300px;
+  border: 8px solid var(--accent);
+  width: 250px;
+  height: 250px;
   object-fit: cover;
 }
 
@@ -91,21 +89,23 @@ body {
 .btn {
   display: inline-block;
   margin-top: 18px;
-  padding: 10px 20px;
+  padding: 12px 24px;
   background: var(--accent);
-  color: #000;
+  color: var(--white);
   border-radius: var(--radius);
   text-decoration: none;
+  font-weight: bold;
   transition: 0.3s;
 }
 
 .btn:hover {
-  background: #ffa726;
+  background: #ff9800;
+  box-shadow: 0 0 12px rgba(255, 152, 0, 0.6);
 }
 
 /* Container */
 .container {
-  max-width: 800px;
+  max-width: 900px;
   margin: auto;
   padding: 40px 20px;
 }
@@ -114,22 +114,20 @@ body {
 .experience-list {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 18px;
   margin-top: 20px;
 }
 
 .exp-card {
   background: var(--card-bg);
-  padding: 18px;
+  padding: 20px;
   border-radius: var(--radius);
   box-shadow: 0 4px 12px rgba(0,0,0,0.6);
-  transition: 0.2s;
-
-  /* Tambahan layout flexbox */
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 16px;
+  transition: 0.3s;
 }
 
 .exp-card:hover {
@@ -138,23 +136,23 @@ body {
 }
 
 .experience-pic {
-  border-radius: 12px;        /* sudut melengkung modern */
-  border: 3px solid var(--accent);
-  width: 120px;
-  height: 120px;
+  border-radius: 10px;
+  border: 3px solid var(--white);
+  width: 150px;
+  height: 150px;
   object-fit: cover;
-  flex-shrink: 0;             /* biar gak ketekan */
+  flex-shrink: 0;
 }
 
 .exp-content {
-  flex: 1; /* isi teks memenuhi ruang tersisa */
+  flex: 1;
 }
 
 .exp-time {
   display: block;
   font-size: 14px;
   color: var(--muted);
-  margin: 6px 0 12px 0;
+  margin: 4px 0 8px 0;
 }
 
 /* Contact Form */
@@ -164,27 +162,34 @@ body {
   width: 100%;
   margin: 10px 0;
   padding: 12px;
-  border: none;
   border-radius: var(--radius);
-  font-size: 16px;
+  font-size: 15px;
+  border: none;
 }
 
 .contact-form input,
 .contact-form textarea {
   background: #2b2b2b;
   color: var(--text);
+  border: 1px solid #444;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #bbb;
 }
 
 .contact-form button {
   background: var(--accent);
-  color: #000;
+  color: var(--white);
   font-weight: bold;
   cursor: pointer;
   transition: 0.3s;
 }
 
 .contact-form button:hover {
-  background: #ffa726;
+  background: #ff9800;
+  box-shadow: 0 0 12px rgba(255, 152, 0, 0.6);
 }
 
 /* Footer */
@@ -196,6 +201,54 @@ body {
   font-size: 14px;
 }
 
+/* Dark Mode */
+body.dark-mode {
+  --bg: #ffffff;
+  --text: #121212;
+  --card-bg: #f5f5f5;
+  --muted: #555;
+}
+
+body.dark-mode .site-header,
+body.dark-mode .site-footer {
+  background: #f0f0f0;
+}
+
+body.dark-mode .nav-links a:hover {
+  color: var(--accent);
+}
+
+body.dark-mode .contact-form input,
+body.dark-mode .contact-form textarea {
+  background: #f9f9f9;
+  color: #121212;
+  border: 1px solid #ccc;
+}
+
+body.dark-mode .btn,
+body.dark-mode .contact-form button {
+  color: #fff;
+}
+
+/* Tombol Dark Mode */
+.dark-toggle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: var(--accent);
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.dark-toggle:hover {
+  background: #ff9800;
+}
+
 /* Responsif */
 @media (max-width: 768px) {
   .nav-links {
@@ -205,9 +258,10 @@ body {
     background: #1c1c1c;
     position: absolute;
     top: 60px;
-    right: 20px;
+    right: 200px;
     padding: 16px;
     border-radius: var(--radius);
+    box-shadow: 0 0 12px rgba(00,00, 0, 0.6);
   }
 
   .nav-links.show {
@@ -218,7 +272,6 @@ body {
     display: block;
   }
 
-  /* Experience responsif: foto pindah ke atas */
   .exp-card {
     flex-direction: column;
     align-items: flex-start;
@@ -226,6 +279,18 @@ body {
 
   .experience-pic {
     align-self: center;
-    margin-top: 12px;
   }
+}
+
+/* Light mode dropdown */
+body.dark-mode .nav-links {
+  background: #f0f0f0; /* background terang */
+}
+
+body.dark-mode .nav-links a {
+  color: #121212; /* teks gelap */
+}
+
+body.dark-mode .nav-links a:hover {
+  color: var(--accent); /* tetap ada efek hover */
 }
