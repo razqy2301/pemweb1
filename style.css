@@ -258,7 +258,7 @@ body.dark-mode .contact-form button {
     background: #1c1c1c;
     position: absolute;
     top: 60px;
-    left: 60px;
+    left: 30px;
     padding: 16px;
     border-radius: var(--radius);
     box-shadow: 0 0 12px rgba(00,00, 0, 0.6);
