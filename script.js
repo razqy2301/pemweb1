@@ -1,4 +1,4 @@
-// === Tambah tombol hamburger untuk mobile ===
+
 const nav = document.querySelector(".nav");
 const navLinks = document.querySelector(".nav-links");
 
@@ -11,7 +11,7 @@ navToggle.addEventListener("click", () => {
   navLinks.classList.toggle("show");
 });
 
-// === Animasi tombol Hire Me ===
+
 const hireBtn = document.querySelector(".btn");
 if (hireBtn) {
   hireBtn.addEventListener("click", () => {
@@ -22,7 +22,7 @@ if (hireBtn) {
   });
 }
 
-// === Notifikasi form kontak ===
+
 const contactForm = document.querySelector(".contact-form");
 if (contactForm) {
   contactForm.addEventListener("submit", (e) => {
@@ -32,7 +32,7 @@ if (contactForm) {
   });
 }
 
-// === Dark Mode Toggle ===
+
 const darkModeBtn = document.createElement("button");
 darkModeBtn.innerText = "🌙 Dark Mode";
 darkModeBtn.className = "dark-toggle";
